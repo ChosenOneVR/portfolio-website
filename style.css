@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0c0f18;
+    color: #fff;
+}
+
+/* === HOMEPAGE-SPECIFIC STYLES === */
+.banner {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.navbar ul li a {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+.content h1 {
+    font-size: 70px;
+    margin-top: 80px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+
+/* === SHARED STYLES (Used on multiple pages) === */
+.logo {
+    width: 120px;
+    cursor: pointer;
+}
+
+/* Universal list item styles for navbars */
+.navbar ul li, .top-nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+/* Universal link styles for navbars */
+.navbar ul li a, .top-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.button-link {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button-link span {
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.button-link:hover span {
+    width: 100%;
+}
+
+
+/* --- STYLES FOR THE CREATIONS PAGE --- */
+.top-nav {
+    width: 85%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-nav ul li a:hover {
+    color: #009688;
+    transition: 0.3s;
+}
+
+.video-showcase-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0 50px 0; /* Top, horizontal, bottom padding */
+}
+
+.showcase-video {
+    width: 100%;
+    max-width: 85vw; /* Max width is 85% of the viewport width */
+    height: auto;
+    border: 3px solid #009688;
+    box-shadow: 0 0 25px rgba(0, 150, 136, 0.5);
+    border-radius: 5px;
+}
+
+.video-description {
+    margin-top: 25px;
+    font-size: 16px;
+    color: #aaa; /* A muted, light gray color */
+    font-style: italic;
+}
